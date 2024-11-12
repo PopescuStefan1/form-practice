@@ -3,6 +3,7 @@ const app = express();
 import usersRouter from "./routes/usersRouter.js";
 
 app.set("view engine", "ejs");
+app.use(express.json()); // Parses JSON bodies
 app.use(urlencoded({ extended: true }));
 app.use("/", usersRouter);
 

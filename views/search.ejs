@@ -1,0 +1,9 @@
+<% if (!locals.user) {%>
+<div>No users found</div>
+<% } else { %>
+<div>
+  ID: <%= locals.user.id %>, Name: <%= locals.user.firstName %> <%= locals.user.lastName %>, Email: <%=
+  locals.user.email %>, Age: <%= locals.user.age ? locals.user.age : 'Not Specified' %>, Bio: <%= locals.user.bio ?
+  locals.user.bio : 'Not Specified' %>
+</div>
+<% } %>
